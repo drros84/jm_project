@@ -14,9 +14,9 @@ def check_index_exists(es, index_name):
 
 def main():
     # Elasticsearch Configuration
-    es = Elasticsearch(hosts = "http://@localhost:9200")
+    es = Elasticsearch(hosts = "http://elasticsearch:9200")
     # all_jobs file directory 
-    all_jobs_path = [jobs_path for jobs_path in Path("/data/all_jobs").iterdir()]
+    all_jobs_path = [jobs_path for jobs_path in Path("/home/jovyan/work/data/all_jobs").iterdir()]
     # Index name
     index_name = "adzuna_jobs"
 

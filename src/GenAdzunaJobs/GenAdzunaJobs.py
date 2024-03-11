@@ -138,5 +138,5 @@ if __name__ == '__main__':
     ts= get_timestamp()
     i = 1
     for data in chunks:
-        create_dump(f"data/adzuna_jobs/adzuna_job_{ts}-{i}.json" , data)
+        create_dump(f"/home/jovyan/work/data/adzuna_jobs/adzuna_job_{ts}-{i}.json" , data)
         i+=1

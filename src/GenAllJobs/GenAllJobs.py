@@ -120,9 +120,9 @@ def gen_jobs(adzuna_jobs_path, all_jobs_fname):
         
 if __name__ == "__main__":
     #
-    adzuna_jobs_path = Path("/data/adzuna_jobs")  
+    adzuna_jobs_path = Path("/home/jovyan/work/data/adzuna_jobs")  
     #
-    all_jobs_path = Path("/data/all_jobs")
+    all_jobs_path = Path("/home/jovyan/work/data/all_jobs")
     #
     all_jobs_fname = [j.name for j in all_jobs_path.iterdir()]
     #
@@ -143,7 +143,7 @@ if __name__ == "__main__":
             liste_all_data.append(data)
              
     #Create dump         
-    create_dump(f"/data/all_jobs/{file_name}", liste_all_data)
+    create_dump(f"/home/jovyan/work/data/all_jobs/{file_name}", liste_all_data)
 
 
 

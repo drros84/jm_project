@@ -1,0 +1,71 @@
+version: "3.0"
+
+services:
+  elasticsearch:
+    build:
+      context: src/elasticsearch/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    container_name: elasticsearch
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    networks:
+      - jm_network
+    ports:
+      - 9200:9200
+
+  kibana:
+    build:
+      context: src/kibana/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    networks:
+      - jm_network
+    depends_on:
+      - elasticsearch
+    ports:
+      - 5601:5601
+
+  db:
+    build:
+      context: src/db/
+    container_name: db
+    networks:
+      - jm_network
+    volumes:
+      - ${DATA_PATH}:/home/jovyan/work/data 
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+
+  genadzunajobs:
+    build:
+      context: src/GenAdzunaJobs/
+    container_name: genadzunajobs
+    networks:
+      - jm_network
+    volumes:
+      - ${DATA_PATH}:/home/jovyan/work/data 
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+
+  genalljobs:
+    build:
+      context: src/GenAllJobs/
+    container_name: genalljobs
+    networks:
+      - jm_network
+    volumes:
+      - ${DATA_PATH}:/home/jovyan/work/data 
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+
+networks:
+  jm_network:
+    driver: bridge

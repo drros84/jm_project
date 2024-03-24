@@ -6,6 +6,12 @@ from elasticsearch import Elasticsearch
 import json
 from pathlib import Path
 import os
+import spacy
+
+# Load spacy model for recognising skills
+nlp = spacy.load("en_core_web_sm")
+ruler = nlp.add_pipe("entity_ruler", before="ner")
+ruler.from_disk("tech_lang_patterns.jsonl")
 
 
 def check_index_exists(es, index_name):
@@ -38,6 +44,15 @@ def main():
                         print(f"Données existantes pour l'ID {item['id']}")
                     else: 
                         print(f"Nouvelles données pour l'ID {item['id']}")
+
+                        #Identify coding skills in the text
+                        job_desc = item['description']
+                        if isinstance(job_desc, list):
+                            job_desc = ' '.join(job_desc)
+                        doc = nlp(job_desc)
+                        ents = [{'label': entity.label_, 'text': entity.text} for entity in doc.ents if entity.ent_id_ == 'SKILLS']
+                        item['skills'] = [ent['text'] for ent in ents]
+
                         # Store data in Elasticsearch
                         es.index(index=index_name, id=item['id'], body=item)
 

@@ -10,6 +10,11 @@ services:
     environment:
       - xpack.security.enabled=false
       - "discovery.type=single-node"
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://elasticsearch:9200"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
     networks:
       - jm_network
     ports:
@@ -34,37 +39,57 @@ services:
     build:
       context: src/db/
     container_name: db
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    depends_on:
+      - elasticsearch
+    environment:
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
     networks:
       - jm_network
-    volumes:
-      - ${DATA_PATH}:/home/jovyan/work/data 
-    environment:
-      JUPYTER_ENABLE_LAB: "yes"
-    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+
 
   genadzunajobs:
     build:
       context: src/GenAdzunaJobs/
     container_name: genadzunajobs
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     networks:
       - jm_network
-    volumes:
-      - ${DATA_PATH}:/home/jovyan/work/data 
     environment:
-      JUPYTER_ENABLE_LAB: "yes"
-    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+      adzuna_url: ${adzuna_url} 
+      adzuna_id: ${adzuna_id}  
+      adzuna_key: ${adzuna_key} 
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
 
   genalljobs:
     build:
       context: src/GenAllJobs/
     container_name: genalljobs
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks: 
+      - jm_network
+    environment:
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
+
+  dashboard:
+    build:
+      context: src/dashboard/
+    container_name: dashboard
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
     networks:
       - jm_network
-    volumes:
-      - ${DATA_PATH}:/home/jovyan/work/data 
-    environment:
-      JUPYTER_ENABLE_LAB: "yes"
-    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+    depends_on:
+      - elasticsearch
+    ports:
+      - 8050:8050
+    
 
 networks:
   jm_network:

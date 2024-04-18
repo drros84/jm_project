@@ -1,0 +1,7 @@
+python-crontab
+httpx
+rich
+pydantic
+python-dotenv
+boto3
+python-dotenv

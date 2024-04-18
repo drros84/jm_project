@@ -20,13 +20,17 @@ from rich import print
 from  data_models import *  
 from utils import configure, create_client, get_timestamp, timer
 
+import boto3
+import os
+from dotenv import load_dotenv
 
 
 
-def create_dump(dump_path, data):
-    """Create dump"""
-    with open(dump_path, 'w', encoding='utf-8') as dump_file:
-        json.dump(data, dump_file, indent=4, ensure_ascii=False) 
+
+# def create_dump(dump_path, data):
+#    """Create dump"""
+#    with open(dump_path, 'w', encoding='utf-8') as dump_file:
+#        json.dump(data, dump_file, indent=4, ensure_ascii=False) 
     
 
 def get_adzuna_ads_page(client: Client,
@@ -135,8 +139,24 @@ if __name__ == '__main__':
     chunk_size = len(adzuna_api_list) // nbr_json_files
     
     chunks = [adzuna_api_list[i:i+chunk_size] for i in range(0, len(adzuna_api_list), chunk_size)]
+
+    # Get AWS credentials
+    load_dotenv()
+    AWS_KEY_ID = os.getenv('AWS_KEY_ID')
+    AWS_SECRET = os.getenv('AWS_SECRET')
+
+    # Connect to S3
+    s3 = boto3.client('s3',
+                    aws_access_key_id = AWS_KEY_ID,
+                    aws_secret_access_key = AWS_SECRET)
+
     ts= get_timestamp()
     i = 1
     for data in chunks:
-        create_dump(f"/home/jovyan/work/data/adzuna_jobs/adzuna_job_{ts}-{i}.json" , data)
+        data_string = json.dumps(data, indent=4, ensure_ascii = False)
+        s3.put_object(
+            Bucket = 'jmproject', 
+            Key = f"adzuna_jobs/adzuna_job_{ts}-{i}.json",
+            Body = data_string)
         i+=1
+

@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook
+FROM python:3.9.19-bookworm
 
 COPY requirements.txt ./
 COPY GenAdzunaJobs.py ./

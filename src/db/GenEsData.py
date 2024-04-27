@@ -9,6 +9,7 @@ import os
 import spacy
 import boto3
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 AWS_KEY_ID = os.getenv('AWS_KEY_ID')

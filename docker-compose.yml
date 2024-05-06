@@ -1,0 +1,115 @@
+version: "3.0"
+
+services:
+  elasticsearch:
+    build:
+      context: src/elasticsearch/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    container_name: elasticsearch
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://elasticsearch:9200"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
+    networks:
+      - jm_network
+    ports:
+      - 9200:9200
+
+  kibana:
+    build:
+      context: src/kibana/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    networks:
+      - jm_network
+    depends_on:
+      - elasticsearch
+    ports:
+      - 5601:5601
+
+  db:
+    build:
+      context: src/db/
+    container_name: db
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    depends_on:
+      - elasticsearch
+    environment:
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
+    networks:
+      - jm_network
+
+
+  genadzunajobs:
+    build:
+      context: src/GenAdzunaJobs/
+    container_name: genadzunajobs
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      - jm_network
+    environment:
+      adzuna_url: ${adzuna_url} 
+      adzuna_id: ${adzuna_id}  
+      adzuna_key: ${adzuna_key} 
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
+
+  genalljobs:
+    build:
+      context: src/GenAllJobs/
+    container_name: genalljobs
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks: 
+      - jm_network
+    environment:
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
+
+  technos:
+    build:
+      context: src/technos/
+    container_name: technos
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks: 
+      - jm_network
+    environment:
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
+      USER_AGENT: ${USER_AGENT}
+
+  dashboard:
+    build:
+      context: src/dashboard/
+    container_name: dashboard
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks:
+      - jm_network
+    depends_on:
+      - elasticsearch
+    ports:
+      - 8050:8050
+     # - 8888:8888
+    environment:
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
+      JUPYTER_ENABLE_LAB: "yes"
+    #command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+    
+
+networks:
+  jm_network:
+    driver: bridge

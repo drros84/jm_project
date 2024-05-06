@@ -72,6 +72,11 @@ def main():
                 ents = [{'label': entity.label_, 'text': entity.text} for entity in doc.ents if entity.ent_id_ == 'SKILLS']
                 item['skills'] = [ent['text'] for ent in ents]
 
+                # title_stop_words = ['(it)', 'h/f', 'f/h', '(h/f)', '(f/h)']
+                # clean_title = item['title'].lower().split(' ')
+                # clean_title = [word for word in clean_title if word not in title_stop_words]
+                # item['clean_title'] = ' '.join(clean_title).capitalize()
+
                 # Store data in Elasticsearch
                 es.index(index=index_name, id=item['id'], body=item)
 

@@ -2,3 +2,4 @@ elasticsearch
 spacy
 boto3
 python-dotenv
+datetime

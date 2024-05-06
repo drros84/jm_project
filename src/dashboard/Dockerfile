@@ -1,5 +1,5 @@
-#FROM python:3.9.19-bookworm
-FROM jupyter/datascience-notebook
+FROM python:3.9.19-bookworm
+#FROM jupyter/datascience-notebook
 
 USER root
 

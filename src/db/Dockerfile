@@ -12,5 +12,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 RUN spacy download en
 
-RUN python create_spacy_skills_model.py
+# RUN python create_spacy_skills_model.py
 # RUN python GenEsData.py

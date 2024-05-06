@@ -5,3 +5,6 @@ numpy
 folium
 pillow
 elasticsearch
+boto3
+python-dotenv
+datetime

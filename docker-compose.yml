@@ -77,6 +77,19 @@ services:
       AWS_KEY_ID: ${AWS_KEY_ID} 
       AWS_SECRET: ${AWS_SECRET} 
 
+  technos:
+    build:
+      context: src/technos/
+    container_name: technos
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    networks: 
+      - jm_network
+    environment:
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
+      USER_AGENT: ${USER_AGENT}
+
   dashboard:
     build:
       context: src/dashboard/
@@ -89,10 +102,12 @@ services:
       - elasticsearch
     ports:
       - 8050:8050
-    #  - 8888:8888
+     # - 8888:8888
     environment:
+      AWS_KEY_ID: ${AWS_KEY_ID} 
+      AWS_SECRET: ${AWS_SECRET} 
       JUPYTER_ENABLE_LAB: "yes"
-    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
+    #command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
     
 
 networks:

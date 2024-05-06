@@ -1,0 +1,7 @@
+typing
+bs4
+requests
+boto3
+pandas
+python-dotenv
+lxml

@@ -7,6 +7,12 @@ ENV PYTHONUNBUFFERED 1
 # RUN pip install elasticsearch requests python-dotenv pathlib
 COPY /src/db/requirements.txt /app/App/src/db/requirements.txt
 RUN pip install -r /app/App/src/db/requirements.txt
+
+# RUN spacy download en_core_web_sm
+
+#COPY /src/db/create_spacy_skills_model.py ./
+#RUN python create_spacy_skills_model.py
+
 COPY /src/db/crontab-ged /etc/cron.d/crontab-ged
 RUN chmod 0644 /etc/cron.d/crontab-ged
 

@@ -18,6 +18,7 @@ from PIL import Image
 from pathlib import Path
 from elasticsearch import Elasticsearch
 import plotly.express as px
+from dashboard_fcts import get_tech_stats
 
 
 # Elasticsearch connection
@@ -57,6 +58,13 @@ for hit in resultats['hits']['hits']:
         # save words in a list
         cleaned_words = {wrd for wrd in word.replace(',', " ").replace('-', " ").replace('.'," ").split() if wrd in words}
         hit['_source']['description'] = ', '.join(list(cleaned_words))
+
+    # Clean title
+    title_stop_words = ['(it)', 'h/f', 'f/h', '(h/f)', '(f/h)']
+    clean_title = hit['_source']['title'].lower().split(' ')
+    clean_title = [word for word in clean_title if word not in title_stop_words]
+    hit['_source']['clean_title'] = ' '.join(clean_title).capitalize()
+
     documents.append(hit['_source'])
         
 # dataframe
@@ -64,7 +72,19 @@ df = pd.DataFrame(documents)
 # rename column description
 df = df.rename(columns={'description': 'technologies'})
 
-titles = [{'label': loc, 'value': loc} for loc in df['title'].unique()]
+titles = [{'label': loc, 'value': loc} for loc in df['clean_title'].unique()]
+
+
+tech_stats_df = pd.DataFrame(words, columns = ['tech'])
+tech_stats_df['frequency'] = 0
+tech_stats_df['avg_min_wage'] = 0
+tech_stats_df['avg_max_wage'] = 0
+
+for tech in tech_stats_df['tech']:
+    tech_stats = get_tech_stats(es, tech)
+    tech_stats_df.loc[tech_stats_df['tech'] == tech, 'frequency'] = tech_stats['frequency']
+    tech_stats_df.loc[tech_stats_df['tech'] == tech, 'avg_min_wage'] = tech_stats['avg_min_wage']
+    tech_stats_df.loc[tech_stats_df['tech'] == tech, 'avg_max_wage'] = tech_stats['avg_max_wage']
 
 app = dash.Dash(__name__)
 # server = app.server
@@ -134,9 +154,22 @@ def generate_layout():
                  })
              ]),
              # Jobs tab
-            dcc.Tab(label='Compétences'),
+            dcc.Tab(label='Compétences', children = [
+                        html.Div([
+                            html.H3("Choisissez une compétence"),
+                            dcc.Dropdown(
+                                id='select_tech',
+                                options= words,
+                                value= ['Python', 'SQL', 'Java', 'C#'],
+                                multi = True
+                                )]),
+                                html.Div([
+                                    dcc.Graph(id = 'frequency_barchart', style={'display': 'inline-block'}),
+                                    dcc.Graph(id = 'dumbbell_chart', style={'display': 'inline-block'})
+                                    ])
+                    ])
              # Salary tab
-            dcc.Tab(label='Salaire')
+            # dcc.Tab(label='Salaire')
          ])
      ])
         
@@ -149,10 +182,10 @@ def generate_layout():
     [Input('title', 'value')],
     # State("output", "value") 
     )
-def update_data_table(titre_choisie):
+def update_data_table(titre_choisi):
     
-    df_col_name = df[[ 'contract','company','title','location', "salary_max", "salary_min", "latitude","longitude", "created", "technologies"]]
-    df_cond = df_col_name[df_col_name['title'] == titre_choisie]
+    df_col_name = df[[ 'contract','company','title','clean_title','location', "salary_max", "salary_min", "latitude","longitude", "created", "technologies"]]
+    df_cond = df_col_name[df_col_name['clean_title'] == titre_choisi]
     to_df = pd.DataFrame(df_cond)
     data =to_df.to_dict("records")
     
@@ -169,6 +202,7 @@ def update_data_table(titre_choisie):
    )
 def update_graphs(rows,columns, selected_row, derived_virtual_selected_rows, active_cell):
     
+
     if selected_row :
         latitude = rows[selected_row[0]]['latitude']
         longitude = rows[selected_row[0]]['longitude']
@@ -190,7 +224,41 @@ def update_graphs(rows,columns, selected_row, derived_virtual_selected_rows, act
     return html.Iframe(srcDoc= open(fichier, 'r').read(), width='100%',height='600')
     
 
+# Callback function to update fig1
+@app.callback(
+    Output('frequency_barchart', 'figure'),
+    Input('select_tech', 'value'),
+    )
+def update_frequency_barchart(select_tech):
 
+    filtered_techs_fig1 = tech_stats_df[tech_stats_df['tech'].isin(select_tech)]
+    
+    fig1 = px.bar(filtered_techs_fig1, x = 'frequency', y = 'tech')
+    fig1.update_layout(yaxis={'categoryorder':'total ascending'})
+    fig1.update_layout(title_text = "Technologies par fréquence",
+        xaxis_title = "Nombre de mentions",
+        margin_l = 65)
+    
+    return fig1
+
+# Callback function to update fig2
+@app.callback(
+    Output('dumbbell_chart', 'figure'),
+    Input('select_tech', 'value'),
+    )
+def update_dumbbell_chart(select_tech):
+
+    filtered_techs_fig2 = tech_stats_df[tech_stats_df['tech'].isin(select_tech)]
+    
+    fig2 = px.scatter(filtered_techs_fig2.sort_values('avg_max_wage'), 
+                    x = ['avg_min_wage','avg_max_wage'], 
+                    y = 'tech')
+    fig2.update_traces(marker_size = 12)
+    fig2.update_layout(title_text = "Fourchette moyenne de salaires par technologie",
+        xaxis_title = "Salaire mensuel (top 10)",
+        margin_l = 65)
+    
+    return fig2
 
 # Définir la mise en page de l'application Dash
 app.layout = generate_layout()

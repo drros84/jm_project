@@ -1,0 +1,10 @@
+
+*/20 * * * * /usr/local/bin/python /app/App/src/db/GenEsData.py >> /var/log/logs/cron.log 
+                                
+
+
+
+
+
+
+

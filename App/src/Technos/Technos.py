@@ -142,11 +142,14 @@ def get_github_frameworks() :
 
 
 if __name__ == '__main__':
-    all_techs = get_db_engines_ranking()+get_github_frameworks()+get_tiobe_top50()+other_tech()
+    all_techs = get_github_frameworks()
     ts = datetime.now().strftime("%Y-%m")
-    path = '/data/Technos/github_web_fws4' 
-
-    json_path = f'{path}_{ts}.json'
+    path = '/home/lynda/Ln-project/App/data/Technos/pf' 
+    
+    json_path = f'{path}.json'
+    
     with open(json_path, 'w', encoding='utf-8') as dump_file:
         # `ensure_ascii` to force display of non-ascii characters
         json.dump(all_techs, dump_file, indent=4, ensure_ascii=False)
+        
+        

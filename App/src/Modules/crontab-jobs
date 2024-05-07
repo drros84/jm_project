@@ -1,0 +1,14 @@
+
+#Pour exécuter le programme deux fois par jour à 6h et à 18h
+#0 6,18 * * *  /usr/local/bin/python /app/App/src/Modules/GenAllJobs.py >> /var/log/logs/cron.log 
+
+#*/5 * * * * /usr/local/bin/python /app/App/src/Modules/GenAdzunaJobs.py >> /var/log/logs/cron.log 
+                                    
+                                
+
+
+
+
+
+
+

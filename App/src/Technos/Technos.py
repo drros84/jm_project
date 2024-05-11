@@ -94,7 +94,7 @@ def get_tiobe_top50() -> List[str]:
 
     return tiobe_top50_list 
 
-def get_github_frameworks() :
+def get_github_frameworks():
     """
     Get names of web most popular frameworks from GitHub survey.
     Params

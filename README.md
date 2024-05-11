@@ -1,136 +1,53 @@
-# **Job Market Project Homework**
+# **Job Market Project**
 
-Here's a file to help team-mates understand how the project works.
-There's also the `NOTES.md` file, for further information, especially about the APIs.
+Ce projet a pour objectif de créer un outil pour aider les étudiants et personnes en reconversion professionelle à s'orienter dans la recherche d'emploi et de formations dans le monde de la data. L'output consiste en un dashboard intéractif dans lequel l'utilisateur peut filtrer des offres d'emploi en ligne et analyser la demande pour certaines technologies sur le marché du travail. 
 
-# **General Links from DataScientest and the APIs**
-- [**Docs**](https://docs.google.com/document/d/1R2yEuvZT49VSL96ciWjyp8NSZWBUD7fr/edit)
-- [**API Adzuna**](https://developer.adzuna.com/)
-- [**API The Muse**](https://www.themuse.com/developers/api/v2)
+Les données sont collectées régulièrement (grace à l'usage de cron) en utilisant l'API d'Adzuna pour les offres d'emploi en France, complété par du web-scraping. Elles sont ensuite nettoyées et stockées dans une base de données ElasticSearch, d'où les données sont ensuite lues par un dashboard construit avec Plotly Dash. Le projet est structuré à l'aide de Docker, avec chaque partie containerisée séparément mais connectés à travers un réseau.
 
-# **Install**
-You can opt for a use of basic tools to manage the project (i.e. `venv` and `pip`.)
-## **Virtual Environment**
-It's of course best practise to create a virtual environment. 
+Pour lancer le projet, il suffit d'aller dans le terminal et de lancer `docker-compose up -d`, attendre quelques minutes, puis se rendre à `0:0:0:0/8050` dans le navigateur web.
 
-### Venv
-This can be performed, inside a folder dedicated to the project, with the following command:
+Les sections suivantes expliquent chaque partie du projet.
 
-`python -m venv .venv` (on some Linux distributions, it's possible you'll have to switch `python` to `python3`)
+## Collecte des données
 
-Then, your virtual environment will be called `.venv`, and will be a hidden folder. As you obviously don't have to commit it, it's added in `.gitignore`.
+Le dossier `App/src/Modules` contient le code nécessaire à la collecte des données. Il est organisé dans un conteneur Docker (voir le `Dockerfile`) basé sur une image `python:3.12-slim`, avec l'installation via pip de librairies contenues dans le fichier `requirements.txt`. Les fichiers `GenAdzunaJobs.py` et `GenAllJobs.py` sont lancés dans le Dockerfile via cron 1 et 2 fois par jour respectivement. Des logs des processus sont sauvegardés dans le fichier `App/src/Modules/LOGS/cron.log`.
 
-### Docker
-An alternative is to run it in a docker container. For this project, you may use the following image from dockerhub: `davidros/jm_project`. The image is a jupyter notebook environment for data science in which additional python packages were installed from the `requirements.txt`file. The image was built using the `Dockerfile` contained in this repository.
+**`GenAdzunaJobs.py`**: En premier lieu, les données d'offre d'emploi sont collectées à l'aide de l'API d'[Adzuna](https://www.adzuna.com), un aggrégateur d'offres d'emploi en ligne. Le fichier contient plusieurs fonctions: `get_adzuna_ads_page()`, qui collecte les données par page (vu qu'il y a une limite sur le nombre d'observation par page dans l'API) et `get_adzuna_ads()`, qui collecte les données pour toutes les pages. Ensuite `create_dump()` sauvegarde les données dans le dossier `App/data/adzuna_jobs`. La version actuelle cherche les offres d'emploi qui mentionnent le mot "data" dans le titre - les fonctions peuvent également chercher les offres d'emploi par catégorie, mais ça n'est pas utilisé dans la version actuelle. Le processus prend en compte les limites des demandent de l'API et optimise les pauses pour collecter le maximum d'offres d'emploi.
 
-To use the image in the terminal, go to current folder and run:
+**`GenAllJobs.py`**: En deuxième lieu, ce fichier lance du web-scraping pour complèter l'information obtenue par l'API. Dans le cas où l'offre d'emploi vient à l'origine du site [HelloWork](https://www.hellowork.com), ce fichier (qui utilise des fonctions du fichier `GenHWJobs.py`) obtient un URL et scrape de l'information supplémentaire à partir du site. La fonction `gen_jobs()` vérifie si un URL de redirection existe dans les données collectées via l'API, et si oui, scrape HelloWork. Ensuite, elle combine les données de l'API et du scraping et les sauvegarde dans le dossier `App/data/all_jobs`.
 
-`docker run --rm -p 8888:8888 -v ${PWD}:/home/jovyan davidros/jm_project`
+**`GenHWJobs.py`**: Contient des fonctions nécessaires au scraping du site [HelloWork](https://www.hellowork.com). Il fait usage de la librairie BeautifulSoup pour le scraping, et procède à un nettoyage léger de certaines variables, comme le salaire, la duration du contrat ou si l'emploi permet le télétravail.
+
+## Stockage des données
+
+Le dossier `App/src/db` contient le code pour lancer le processus de stockage des données collectées dans la phase précédente dans une base de données ElasticSearch (un serveur ElasticSearch est déjà lancé via un ficher `docker-compose.yml`, comme expliqué ci-dessous). Cette partie est organisée dans un conteneur Docker basé sur une image `python:3.12-slim`, avec l'installation via pip de librairies contenues dans le fichier `requirements.txt`. Un cron job lancé dans le Dockerfile éxecute le fichier `GenEsData.py` régulièrement afin de d'uploader les dernières données à la base de données. Des logs des processus sont sauvegardés dans le fichier `App/src/db/LOGS/cron.log`.
+
+**`GenEsData.py`**: ce fichier se connecte au serveur ElasticSearch et créer un nouvel index `adzuna_jobs` si il n'existe pas encore. Ensuite, il upload les données contenues dans le dossier `App/data/all_jobs` sur la base de données si elles n'y sont pas déjà.
+
+## Collecte de technologies 
+
+Le dossier `App/src/Technos` contient un fichier `Technos.py` qui collecte de l'information sur les technologies les plus utilisées dans le monde de la data. La fonction `get_db_engines_ranking()` scrape le site [db-engines.com](https://db-engines.com/en/ranking) qui contient une liste de technologies de bases de données les plus populaires; la fonction `get_tiobe_top50()` scrape l'index [TIOBE](https://www.tiobe.com/tiobe-index/) des languages de programmation les plus populaires; la fonction `get_github_frameworks()` scrape une liste des [frameworks les plus populaires sur Github](https://insights.stackoverflow.com/survey/2021#technology-most-popular-technologies).
+
+Les données sont stockées dans le dossier `App/data/Technos` pour utilisation dans la section suivante.
+
+## Visualisation des données
+
+Le dossier `App/src/Dashboard` contient les fichier nécessaire à la création du dashboard. Les données contenues dans la base de donnée ElasticSearch `adzuna_jobs` sont visualisées dans un dashboard Plotly Dash qui permet une intéraction avec les données. Il est organisé dans un conteneur Docker (voir le `Dockerfile`) basé sur une image `python:3.12-slim`, avec l'installation via pip de librairies contenues dans le fichier `requirements.txt`. Un cron job lancé dans le Dockerfile éxecute le fichier `app.py` régulièrement. Des logs des processus sont sauvegardés dans le fichier `App/src/Dashboard/LOGS/cron.log`.
+
+**`app.py`**: Ce fichier contient le code pour créer un dashboard Plotly Dash, avec les charactéristiques suivantes:
+
+* Les technologies collectées dans le dossier `App/src/Technos` (voir section précédente) sont utilisées pour filtrer les offres d'emploi stockées sur la base de données `adzuna_jobs` qui sont importées et converties dans un DataFrame. Pour chaque offre d'emploi, les technologies sont incluses dans la colonne `technologies` du DataFrame. De plus, une nouvelle colonne `clean_title` est créée, qui nettoie le titre de l'offre d'emploi pour standardiser un peu plus leur format (par exemple, retirer la mention "H/F" ou "F/H"), les convertit en minuscules avec une majuscule pour seulement la première lettre.
+
+* La liste de technologies est aussi utilisée pour calculer leur fréquence, ainsi que la moyenne des fourchettes de salaire mentionnant ces technologies.
+
+* Le dashboard Plotly dash est créé dans l'objet `app`, et le layout de l'application est créé dans une fonction `generate_layout()`. L'application contient les fonctionalités suivantes:
+
+    * Un filtre permet à l'utilisateur de sélectionner un type d'offre d'emploi. La fonction réactive `update_data_table()` permet ensuite de visualiser les offres d'emploi correspondantes dans une table.
+    * Pour chaque offre d'emploi dans la table ci-dessus, l'utilisateur peut cocher une case qui affiche une carte de France avec la localisation de l'offre d'emploi. Cette carte est créée par la fonction réactive `update_graphs()` qui utilise la librairie `folium`.
+    * Un onglet `Compétences` qui permet à l'utilisateur de visualiser des charactéristiques de technologies dans les offres d'emploi. Un filtre permet à l'utilisateur de selectionner plusieurs technologies à la fois. La fonction réactive `update_frequency_barchart()` montre ensuite la fréquence de mention de ces technologies dans les offres d'emploi à travers un histogramme. La fonction réactive `update_dumbbell_chart()` visualise la fourchette moyenne de salaires pour ces technologies à travers un dumbbell chart, avec les points montrant la moyenne des salaires minimum et maximum.
+
+## Docker
+
+Un fichier `docker-compose.yml` créé un réseau avec les conteneurs docker ci-dessus. En plus des conteneurs créés avec les Dockerfiles mentionnés ci-dessus, le docker-compose créé des conteneurs pour `elasticsearch` et `kibana`.
 
 
-## **Packages Installing**
-All needed packages are listed in `requirements.txt`. Therefore, all can be installed via:
-
-`pip install -r requirements.txt`
-
-Especially, this includes a full `jupyterlab` environment, allowing you to fully develop within as an IDE.
-
-## **Packages Small Description/Purpose**
-### `python-dotenv`
-As you will have to use credentials for each API, this library will allow you to load them as environment variables, preventing them to be hardcoded and visible inside the code.
-
-All your credentials have to be stored in a `.env` file. A template is provided in the repository with the `.env_template` file to show you how you can manage it.
-
-For further information, [**this tutorial**](https://www.youtube.com/watch?v=c42T5wKSztQ) sums-up the fundamentals.
-
-### `httpx`
-This package is an alternative to `requests` which has been considered as it allows to perform asynchronous requests if necessary.
-Envisioning the rate limit of Adzuna's API for example, this may seem a bit overkill or useless, but you have also to consider that webscraping could be part of the job. Again, it's well understand that the main issue isn't performance, anyway, this package is consistent and its interface is quite alike `requests`' one.
-
-### `bs4`
-This has been chosen as the parser provider.
-
-### `rich`
-This is essentially there for "enriching terminal outputs", allowing to define colors for logging purposes, as this will be often noticed within the code.
-
-🚸 **TO BE CONTINUED**
-
-# **Content**
-## **Special Subfolders**
-### **`notebooks`**
-Obviously intended for **exploratory purposes**:
-- tests for data mining
-- EDA later
-This will surely be erased/gitignored later
-
-### **`data`** (gitignored)
-This folder contains the different dumps from
-- **APIs requesting**
-- **Webscraping**
-
-It has been **added to `.gitignore` not to overflow storage**.
-
-Hence, dump files have to be stored somewhere else.
-
-### **`config_data`**
-For the moment, this contains, as a JSON file, the list of French towns involved with The Muse API.
-
-## **Main Files**
-### `adzuna.py`
-This module contains functions devoted to extract dumps from different endpoints from Adzuna API:
-#### 🛠️ `get_adzuna_ads`
-##### **OVERVIEW**
-
-This function allows to call the API in order to **find relevant information about ads**, the endpoint used being `GET jobs/{country}/search/{page}`
-It can be seen as a daily tool which will try to fetch as many ads as possible:
-- calling for **1 related page, containing 50 results**,
-- playing around the rate-limit of 25 calls per min,
-- **theorically** proceeding to **up to 250 calls** (daily rate limit),
-- **evaluating if the aggregated response contains too many duplicates** (checked on the **`id`** field, which a threshold ratio set inside the function via the **`THRESHOLD`** constant) and then **stopping the fetching whenever it occurs**.
-
-🔎 *Experiments lead to notice that duplicates tend to often appear after featching 100 pages, meaning you're still far from the theorical limit*.
-
-##### **PARAMETERS**
-
-Both being optional, they allow to narrow the scope of search
-- `what`: the keywords to search for (multiple items may be space separated)
-- `cat_tag`: the category tag, as returned by the `category` endpoint (read below)
-
-##### **RETURN VALUES**
-
-It returns a `tuple` containing:
-- A list of `AdzunaJob` objects, as defined in `data_models.py`
-- The number of remaining calls for the day.
-
-##### **EXAMPLES OF USE**
-> ❌ **TO DO**
-
-#### 🛠️ `get_adzuna_cats`
-
-This function requests the API to get a list of existing categories, the used endpoint being `GET jobs/{country}/categories`.
-> ❌ **DEVELOP**
-
-#### 🛠️ `get_adzuna_locs`
-
-This function requests the API to get salary data for locations inside an area, the used endpoint being `GET jobs/{country}/geodata`
-> ❌ **DEVELOP**
-
-#### 🛠️ `dump_adzuna_jobs`
-
-This function allows to dump ads transformed data from the API to be stored in JSON format in the `data` folder.
-
-### `the_muse.py`
-Same as previously, but for The Muse API.
-
-### `utils.py`
-Sums up utility functions or constants used in the whole project, essentially to refactor the code and externalize specific purposes (like authenticating to the APIs and creating a client.)
-
-### `adzuna_urls`
-Module devoted to forge/scraped URLs involved with Adzuna API, meaning:
-- Adzuna's own pages
-- HelloWork pages
-
-corresponding to a job ad.
-
-### `data_models`
-This module contains logic devoted to **transform** extracted data.

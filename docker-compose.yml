@@ -1,0 +1,89 @@
+version: "3"
+
+services:
+  es-container:
+    container_name: es-container
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.1.2
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    # healthcheck:
+    #     test: ["CMD", "curl", "-f", "http://es-container:9200"]
+    #     interval: 30s
+    #     timeout: 10s
+    #     retries: 5
+    networks:
+      - es-net
+    ports:
+      - 9200:9200
+
+  kibana:
+    container_name: kb-container
+    image: docker.elastic.co/kibana/kibana:8.1.2
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es-container:9200
+    networks:
+      - es-net
+
+    depends_on:
+      - es-container
+    ports:
+      - 5601:5601
+
+  db:
+    container_name: db
+    tty: true
+    stdin_open: true
+    build: 
+      context: ./App
+      dockerfile: ./src/db/Dockerfile
+    volumes:
+      - ./:/app 
+      - ./App/src/db/LOGS/:/var/log/logs
+    networks:
+      - es-net
+    depends_on:
+      - es-container
+  
+  dash:
+    container_name: dash
+    tty: true
+    stdin_open: true
+    build: 
+      context: ./App
+      dockerfile: ./src/Dashboard/Dockerfile
+    volumes:
+      - ./:/app 
+      - ./App/src/Dashboard/LOGS/:/var/log/logs
+
+    networks:
+      - es-net
+    depends_on:
+      - es-container
+    restart: on-failure
+    ports:
+      - 8050:8050
+  
+  genalljobs:
+    container_name: genalljobs
+    tty: true
+    stdin_open: true
+    build: 
+      context: ./App
+      dockerfile: ./src/Modules/Dockerfile
+    volumes:
+      - ./:/app 
+      - ./App/src/Modules/LOGS/:/var/log/logs
+    networks:
+      - es-net
+    environment:
+      adzuna_url: ${adzuna_url}  
+      adzuna_id: ${adzuna_id}  
+      adzuna_key: ${adzuna_key} 
+    
+   
+    
+
+networks:
+  es-net:
+    driver: bridge

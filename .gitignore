@@ -1,4 +1,5 @@
 .env
 .venv
-data
+venv
+L-venv*
 __pycache__/

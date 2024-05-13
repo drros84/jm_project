@@ -1,0 +1,568 @@
+2024-05-07 11:54:16,495 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:54:16,500 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:54:16,543 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:54:16,613 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f9847fdf0b0>
+2024-05-07 11:54:16,614 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f9847ffced0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:54:16,672 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f984825f6e0>
+2024-05-07 11:54:16,673 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:54:16,674 : DEBUG : send_request_headers.complete
+2024-05-07 11:54:16,674 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:54:16,674 : DEBUG : send_request_body.complete
+2024-05-07 11:54:16,674 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:54:16,793 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:54:16 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3MTUwODI4NTYsImxhbmdfY29kZSI6ImZyIiwidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1Iiwic2lkIjoiMTQ5MDc2LTg3ZDNlMTZjLTBjNjgtMTFlZi05ZTgyLTQxZmRiMjA4YjBhNCIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkifQ.lbth1qqYLAic6YH0q0xvsWMi-uvmWLTnLoK5YyuYLDg; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=87d3e482-0c68-11ef-a06f-2c20b308b0a4; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:54:16 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:54:16 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDU1Mzg0NDg5NiJdLCJjcmVhdGVkIjoxNzE1MDgyODU2fQ.GIxf1KF7u2uiQxuqlQdWllnwJgvRMqsML2ebgl5c4NY; path=/; expires=Tue, 07-May-2024 13:24:16 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082856; path=/; expires=Wed, 07-May-2025 11:54:16 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:54:16 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'65083807'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:54:16,793 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4553844896?se=WPs62uXK7hGcETEFI67ggA&utm_medium=api&utm_source=616ca7d5&v=34681119013670FD63DA13D9AA3AED9A96FAB18D "HTTP/1.1 404 Not Found"
+2024-05-07 11:54:16,794 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:54:16,794 : DEBUG : receive_response_body.complete
+2024-05-07 11:54:16,794 : DEBUG : response_closed.started
+2024-05-07 11:54:16,794 : DEBUG : response_closed.complete
+2024-05-07 11:55:01,914 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:01,918 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:01,976 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:02,019 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117ec61130>
+2024-05-07 11:55:02,019 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e9832d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:02,072 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e971820>
+2024-05-07 11:55:02,072 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:02,073 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:02,073 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:02,074 : DEBUG : send_request_body.complete
+2024-05-07 11:55:02,074 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:02,183 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:55:02 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX21lZGl1bV9zZXNzaW9uIjoiYXBpIiwidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1Iiwic2lkIjoiMTQ4NzU5LWEyZTNhNzhhLTBjNjgtMTFlZi05ZTgyLTQxZmRiMjA4YjBhNCIsInRpbWVzdGFtcCI6MTcxNTA4MjkwMiwibGFuZ19jb2RlIjoiZnIifQ.ELLXX8FvphAAWeyDPAOCm_lBhZCj_1UpKOjBc4xDb8Q; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=a2e3aba4-0c68-11ef-a76b-ef1eb308b0a4; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:02 GMT; max-age=63072000'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:02 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTAyLCJpZHMiOlsiNDM5NjcxMTQ2OCJdfQ.QgrC9YDAeqlGUkVLO-W2FYJaf3rv2lSvZo2MOQfBc2Q; path=/; expires=Tue, 07-May-2024 13:25:02 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082902; path=/; expires=Wed, 07-May-2025 11:55:02 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:55:02 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'58187163'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:55:02,187 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4396711468?se=EpqNouXK7hGkt7pDMElmzQ&utm_medium=api&utm_source=616ca7d5&v=CD2D34B81666C458A9338533F96ECBC77BD07BB5 "HTTP/1.1 404 Not Found"
+2024-05-07 11:55:02,187 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:02,215 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:02,215 : DEBUG : response_closed.started
+2024-05-07 11:55:02,215 : DEBUG : response_closed.complete
+2024-05-07 11:55:08,332 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:08,334 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:08,397 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:08,421 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e807f80>
+2024-05-07 11:55:08,421 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e7ffc50> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:08,469 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e807e90>
+2024-05-07 11:55:08,469 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:08,470 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:08,470 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:08,470 : DEBUG : send_request_body.complete
+2024-05-07 11:55:08,470 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:08,588 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:55:08 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4757'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJlcG9jaHRpbWUiOjE3MTUwODI5MDgsImFkX2lkIjoiNDM5NDU1NDY2MiIsImNsaWNrX2lkIjoiRUxxMXBtZ003eEduWlZ0SHBSSEdCQSJ9.N2btYoL65X8e3C6Q6TDfCPqxf5QKrFMn4XKM6TcMnB8; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:08 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3MTUwODI5MDgsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJzaWQiOiIzNDcwNTEtYTZiMzIwN2EtMGM2OC0xMWVmLTk2N2EtNWI0N2E1MTFjNjA0IiwibGFuZ19jb2RlIjoiZnIiLCJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUifQ.ka3ent-oAVphCuy0UXe5vnX-8HbDJMDPQlL6nS6jcng; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=a6b323fe-0c68-11ef-96aa-4069a511c604; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:08 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_epoch=1715082908; path=/; expires=Wed, 07-May-2025 11:55:08 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:55:08 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDM5NDU1NDY2MiJdLCJjcmVhdGVkIjoxNzE1MDgyOTA4fQ.iiq4hp8kdsQ08xDmwj3vQyB1nDwBAgFEu0jmC65p6bw; path=/; expires=Tue, 07-May-2024 13:25:08 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:08 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'127286406'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:55:08,591 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4394554662?se=EpqNouXK7hGkt7pDMElmzQ&utm_medium=api&utm_source=616ca7d5&v=33E8CFBBAD87CEDE5AB80A993F4D62A0E9E120A5 "HTTP/1.1 200 OK"
+2024-05-07 11:55:08,591 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:08,592 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:08,592 : DEBUG : response_closed.started
+2024-05-07 11:55:08,592 : DEBUG : response_closed.complete
+2024-05-07 11:55:14,858 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:14,859 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:14,892 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:14,917 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e823500>
+2024-05-07 11:55:14,917 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e819bd0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:14,966 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e823410>
+2024-05-07 11:55:14,966 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:14,967 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:14,967 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:14,968 : DEBUG : send_request_body.complete
+2024-05-07 11:55:14,968 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:15,100 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:55:15 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4738'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJlcG9jaHRpbWUiOjE3MTUwODI5MTQsImNsaWNrX2lkIjoiSHJDVXFtZ003eEdMV2g5TWVtZHd1USIsImFkX2lkIjoiNDM5NDU1NDA2NCJ9.QKsapzEegnishQ-6O4oJjZVrWMj-QMchL5m0EH5F4LM; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:14 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUiLCJzaWQiOiI1MTI1My1hYTkyNGU1YS0wYzY4LTExZWYtOGMwNS0xZjRjN2E2NzcwYjkiLCJ0aW1lc3RhbXAiOjE3MTUwODI5MTUsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJsYW5nX2NvZGUiOiJmciJ9.WaBAeJxbn6RSnvf3SY-UrtSqgdA6LHqbW_O-XoutyUM; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=aa9251a2-0c68-11ef-bf16-346e7a6770b9; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:15 GMT; max-age=63072000'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:15 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDM5NDU1NDA2NCJdLCJjcmVhdGVkIjoxNzE1MDgyOTE0fQ.s2hgLwO15EBkOPIk-zadu1gygpx7kIO6ihQjcTD0tOA; path=/; expires=Tue, 07-May-2024 13:25:15 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082914; path=/; expires=Wed, 07-May-2025 11:55:15 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:55:15 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'88179824'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:55:15,103 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4394554064?se=EpqNouXK7hGkt7pDMElmzQ&utm_medium=api&utm_source=616ca7d5&v=F56320C787107EF411E26415A0F967F2CFC6F56B "HTTP/1.1 200 OK"
+2024-05-07 11:55:15,103 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:15,104 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:15,104 : DEBUG : response_closed.started
+2024-05-07 11:55:15,104 : DEBUG : response_closed.complete
+2024-05-07 11:55:18,416 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:18,418 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:18,448 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:18,499 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e842960>
+2024-05-07 11:55:18,500 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e81b450> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:18,553 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e842870>
+2024-05-07 11:55:18,554 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:18,554 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:18,555 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:18,555 : DEBUG : send_request_body.complete
+2024-05-07 11:55:18,555 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:18,685 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:55:18 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4745'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJlcG9jaHRpbWUiOjE3MTUwODI5MTgsImFkX2lkIjoiNDM5NDU3MTc2MSIsImNsaWNrX2lkIjoiOURHNHJHZ003eEdWYjlhc0FjbF9tdyJ9.hdtPPofT_szDQz1lQxqQmzMtlswbFA-3cewen5yggq0; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:18 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRpbWVzdGFtcCI6MTcxNTA4MjkxOCwidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1Iiwic2lkIjoiMzQ4NDI0LWFjYjVhYTZhLTBjNjgtMTFlZi1hYzhhLWQ2YWMwMWM5N2Y5YiIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkifQ.WTJbdteZ3aOncjA2QtWkcGwW9S5A-4QPmxZwjR5_2B0; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=acb5adb2-0c68-11ef-934f-bfce01c97f9b; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:18 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_epoch=1715082918; path=/; expires=Wed, 07-May-2025 11:55:18 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:18 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:55:18 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTE4LCJpZHMiOlsiNDM5NDU3MTc2MSJdfQ.vhZxrNiGp8YC4lrZjHrqmG0HqWYbQyjBZPM4KwRfRb0; path=/; expires=Tue, 07-May-2024 13:25:18 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'201458142'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:55:18,688 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4394571761?se=EpqNouXK7hGkt7pDMElmzQ&utm_medium=api&utm_source=616ca7d5&v=21868AA4E519B076F7BF8C2FC49272C8237A9039 "HTTP/1.1 200 OK"
+2024-05-07 11:55:18,688 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:18,689 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:18,689 : DEBUG : response_closed.started
+2024-05-07 11:55:18,689 : DEBUG : response_closed.complete
+2024-05-07 11:55:25,395 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:25,397 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:25,428 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:25,452 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e859b20>
+2024-05-07 11:55:25,452 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e868d50> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:25,504 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e859a30>
+2024-05-07 11:55:25,504 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:25,505 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:25,505 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:25,505 : DEBUG : send_request_body.complete
+2024-05-07 11:55:25,505 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:25,620 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:55:25 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxNTA4MTctYjBkYTQxYmUtMGM2OC0xMWVmLTk0OTQtMDE4MjcwNTJkOGQ3IiwibGFuZ19jb2RlIjoiZnIiLCJ0cmFmZmljX21lZGl1bV9zZXNzaW9uIjoiYXBpIiwidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1IiwidGltZXN0YW1wIjoxNzE1MDgyOTI1fQ.IVoQe7Qj6xGd_akWtyn2OUldhhLILMBAoTVd-BX0JRo; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=b0da4510-0c68-11ef-b6b4-1aa37052d8d7; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:25 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:55:25 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082925; path=/; expires=Wed, 07-May-2025 11:55:25 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTI1LCJpZHMiOlsiNDUzNDA3OTIxNyJdfQ.XQ7mmrsDq_XIChV6EgNPpCPRpdq9yMR9w427jGZhaqQ; path=/; expires=Tue, 07-May-2024 13:25:25 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:25 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'72107907'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:55:25,621 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4534079217?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=1063E235407E26ECE4CF514D1319E51B923471EE "HTTP/1.1 404 Not Found"
+2024-05-07 11:55:25,621 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:25,622 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:25,622 : DEBUG : response_closed.started
+2024-05-07 11:55:25,623 : DEBUG : response_closed.complete
+2024-05-07 11:55:30,649 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:30,652 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:30,681 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:30,704 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6e03b0>
+2024-05-07 11:55:30,705 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e8d8350> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:30,756 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6e02c0>
+2024-05-07 11:55:30,756 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:30,757 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:30,757 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:30,757 : DEBUG : send_request_body.complete
+2024-05-07 11:55:30,757 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:30,891 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:55:30 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiI0ODU1NS1iM2ZiZTliMC0wYzY4LTExZWYtODYxMS1jYWY5YjllYjc1YzEiLCJ0cmFmZmljX21lZGl1bV9zZXNzaW9uIjoiYXBpIiwibGFuZ19jb2RlIjoiZnIiLCJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUiLCJ0aW1lc3RhbXAiOjE3MTUwODI5MzB9.NaTDl0Ou7YFFx43DkwL4e20ttmZQsdzBQCkTMxupLj8; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=b3fbecb2-0c68-11ef-a02b-8b1cbaeb75c1; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:30 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:55:30 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:30 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082930; path=/; expires=Wed, 07-May-2025 11:55:30 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDM5NjcxMzU3NyJdLCJjcmVhdGVkIjoxNzE1MDgyOTMwfQ.JyF5gDEW_p9_FLbVyXkWes16CDI2BSD_06LolO2NLic; path=/; expires=Tue, 07-May-2024 13:25:30 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'7600417'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:55:30,893 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4396713577?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=C765D81F93C3250EC3E901F219BFF9AC993CD56D "HTTP/1.1 404 Not Found"
+2024-05-07 11:55:30,893 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:30,895 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:30,895 : DEBUG : response_closed.started
+2024-05-07 11:55:30,895 : DEBUG : response_closed.complete
+2024-05-07 11:55:34,817 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:34,819 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:34,850 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:34,874 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e737da0>
+2024-05-07 11:55:34,874 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e745450> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:34,919 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e737cb0>
+2024-05-07 11:55:34,919 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:34,920 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:34,920 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:34,920 : DEBUG : send_request_body.complete
+2024-05-07 11:55:34,920 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:35,044 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:55:34 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJzaWQiOiIxNTExMDUtYjY3NzJmMmUtMGM2OC0xMWVmLTk0OTQtMDE4MjcwNTJkOGQ3IiwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsImxhbmdfY29kZSI6ImZyIiwidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1IiwidGltZXN0YW1wIjoxNzE1MDgyOTM0fQ.KHzEv0v1eFy4pDZTH1pAvjla4OC2P9_eCl1ihxqm9-8; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=b6773212-0c68-11ef-8f20-3aa47052d8d7; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:34 GMT; max-age=63072000'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:34 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDM5NjcxNjU2MCJdLCJjcmVhdGVkIjoxNzE1MDgyOTM0fQ.telLZW0XkLBc5i8pK_livTZo0SUKuc5xMsYhDc_4r-M; path=/; expires=Tue, 07-May-2024 13:25:34 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082934; path=/; expires=Wed, 07-May-2025 11:55:34 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:55:34 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'127881460'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:55:35,046 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4396716560?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=B39D0C2DAFFB9538F724A893E95C5CB451A54EFB "HTTP/1.1 404 Not Found"
+2024-05-07 11:55:35,047 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:35,048 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:35,048 : DEBUG : response_closed.started
+2024-05-07 11:55:35,049 : DEBUG : response_closed.complete
+2024-05-07 11:55:40,966 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:40,968 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:40,999 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:41,024 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e85b650>
+2024-05-07 11:55:41,024 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e86b050> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:41,075 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e85ba70>
+2024-05-07 11:55:41,075 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:41,075 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:41,076 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:41,076 : DEBUG : send_request_body.complete
+2024-05-07 11:55:41,076 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:41,206 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:55:41 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJzaWQiOiI0ODMyMy1iYTIyNzYyZS0wYzY4LTExZWYtODYxMS1jYWY5YjllYjc1YzEiLCJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUiLCJ0aW1lc3RhbXAiOjE3MTUwODI5NDF9.izqjCmt7_XrPpeVuk_-as_xGtg9zBpd88BN9bQ_prfc; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=ba227980-0c68-11ef-a0be-a31bbaeb75c1; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:41 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:55:41 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTQxLCJpZHMiOlsiNDM5Njc3NDYxMSJdfQ.a8y6lFV-vc3oqCRkH9u9rbcZbBSvMBZ9VACkCUgmT74; path=/; expires=Tue, 07-May-2024 13:25:41 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082941; path=/; expires=Wed, 07-May-2025 11:55:41 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:41 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'8687013'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:55:41,209 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4396774611?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=610C4599E93C15936EEFFEE15201FB3A725DDA21 "HTTP/1.1 404 Not Found"
+2024-05-07 11:55:41,209 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:41,210 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:41,211 : DEBUG : response_closed.started
+2024-05-07 11:55:41,211 : DEBUG : response_closed.complete
+2024-05-07 11:55:46,797 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:46,799 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:46,829 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:46,853 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7c71a0>
+2024-05-07 11:55:46,853 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e7ba3d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:46,905 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7c7080>
+2024-05-07 11:55:46,905 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:46,906 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:46,906 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:46,906 : DEBUG : send_request_body.complete
+2024-05-07 11:55:46,907 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:46,999 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:55:46 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3MTUwODI5NDYsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSIsImxhbmdfY29kZSI6ImZyIiwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsInNpZCI6IjQ4NzA0LWJkOWJlNzY4LTBjNjgtMTFlZi04NjExLWNhZjliOWViNzVjMSJ9.eEC43luOlRNFrCoRMvgkVYno49HfQGDutJxJH5fnncY; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=bd9bea4c-0c68-11ef-998a-201dbaeb75c1; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:46 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:55:46 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:46 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTQ2LCJpZHMiOlsiNDQyOTE0OTAwOCJdfQ.-EOGfB2fGBW6-dNadYrzd_klvoJdlBla2yDZyTWAN2Y; path=/; expires=Tue, 07-May-2024 13:25:46 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082946; path=/; expires=Wed, 07-May-2025 11:55:46 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'8753439'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:55:47,000 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4429149008?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=602962A803A965EC988CAA68120B68520A4FA03E "HTTP/1.1 404 Not Found"
+2024-05-07 11:55:47,000 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:47,024 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:47,024 : DEBUG : response_closed.started
+2024-05-07 11:55:47,024 : DEBUG : response_closed.complete
+2024-05-07 11:55:53,989 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:53,989 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:54,019 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:54,044 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e5eaff0>
+2024-05-07 11:55:54,044 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e84b9d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:54,099 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e5eaed0>
+2024-05-07 11:55:54,099 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:54,099 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:54,099 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:54,099 : DEBUG : send_request_body.complete
+2024-05-07 11:55:54,099 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:54,224 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:55:54 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJzaWQiOiIxNTEwMzctYzFlNTg5MDAtMGM2OC0xMWVmLTk0OTQtMDE4MjcwNTJkOGQ3IiwidGltZXN0YW1wIjoxNzE1MDgyOTU0LCJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUifQ.VVALIo2y01_5bjZUpuxLgoR92pKHHSdbALkTV1MXcw0; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=c1e58c16-0c68-11ef-9902-f6a37052d8d7; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:54 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_epoch=1715082954; path=/; expires=Wed, 07-May-2025 11:55:54 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:54 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDM5NDU2NzYwMCJdLCJjcmVhdGVkIjoxNzE1MDgyOTU0fQ.axU5D9E4BGsXZSgrg-dBAJM7QaWzb5c55RZF3v54qHI; path=/; expires=Tue, 07-May-2024 13:25:54 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:55:54 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'140820669'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:55:54,226 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4394567600?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=8BC0177BFA303A4E32B9706A243B86E1ABCA26A9 "HTTP/1.1 404 Not Found"
+2024-05-07 11:55:54,227 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:54,228 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:54,228 : DEBUG : response_closed.started
+2024-05-07 11:55:54,229 : DEBUG : response_closed.complete
+2024-05-07 11:55:59,500 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:55:59,501 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:55:59,526 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:55:59,550 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e656c00>
+2024-05-07 11:55:59,550 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e63bb50> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:55:59,603 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e656ae0>
+2024-05-07 11:55:59,603 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:59,604 : DEBUG : send_request_headers.complete
+2024-05-07 11:55:59,604 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:55:59,605 : DEBUG : send_request_body.complete
+2024-05-07 11:55:59,605 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:55:59,727 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:55:59 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSIsInNpZCI6IjUxMjUzLWM1MmQzY2Q0LTBjNjgtMTFlZi04YzA1LTFmNGM3YTY3NzBiOSIsInRpbWVzdGFtcCI6MTcxNTA4Mjk1OSwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSJ9.Rj4Ay5kj_K4MrM_fAdYUXnFDppNZD-gURNFjMWvcuOc; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=c52d3f68-0c68-11ef-ac89-346e7a6770b9; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:55:59 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:55:59 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082959; path=/; expires=Wed, 07-May-2025 11:55:59 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTU5LCJpZHMiOlsiNDQ5MzIzNDU3MCJdfQ.2FbDG00s3qrrSx6WxgVCsNBLSmCvNt1q0xL347WyO9g; path=/; expires=Tue, 07-May-2024 13:25:59 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:55:59 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'88147842'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:55:59,730 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4493234570?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=AA818C0777127B3D00F3C8CB38B5E62661E01A68 "HTTP/1.1 404 Not Found"
+2024-05-07 11:55:59,730 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:55:59,731 : DEBUG : receive_response_body.complete
+2024-05-07 11:55:59,732 : DEBUG : response_closed.started
+2024-05-07 11:55:59,732 : DEBUG : response_closed.complete
+2024-05-07 11:56:06,467 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:06,468 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:06,496 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:06,568 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e88a510>
+2024-05-07 11:56:06,568 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e849450> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:06,624 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e88a660>
+2024-05-07 11:56:06,625 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:06,625 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:06,626 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:06,626 : DEBUG : send_request_body.complete
+2024-05-07 11:56:06,626 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:06,771 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:56:06 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4726'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJjbGlja19pZCI6IlNIaGd5V2dNN3hHblpWdEhwUkhHQkEiLCJhZF9pZCI6IjQzOTU1MTQ1ODAiLCJlcG9jaHRpbWUiOjE3MTUwODI5NjZ9.Ke4otwT0RqrtZQWIZ9Ha8o7LzH5AE88nM4cpcxLTw_o; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:06 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRpbWVzdGFtcCI6MTcxNTA4Mjk2Niwic2lkIjoiMzQ2NzUwLWM5NWRhNzA4LTBjNjgtMTFlZi05NjdhLTViNDdhNTExYzYwNCIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUifQ.OHmxKEIEQkm3D-ToVXiXeywj08PWaqvQTBVyQGYATcA; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=c95dac08-0c68-11ef-94e4-1368a511c604; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:06 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTY2LCJpZHMiOlsiNDM5NTUxNDU4MCJdfQ.OF_zc2z4L-T98IzFJROn_qmfSSIUf7KcnFM_b3BSJps; path=/; expires=Tue, 07-May-2024 13:26:06 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082966; path=/; expires=Wed, 07-May-2025 11:56:06 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:56:06 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:06 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'159696449'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:56:06,774 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4395514580?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=F2E6D84513E072754625AFDC2845996606D82857 "HTTP/1.1 200 OK"
+2024-05-07 11:56:06,774 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:06,775 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:06,775 : DEBUG : response_closed.started
+2024-05-07 11:56:06,776 : DEBUG : response_closed.complete
+2024-05-07 11:56:12,283 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:12,285 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:12,335 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:12,361 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7d6bd0>
+2024-05-07 11:56:12,361 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e7774d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:12,419 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7d6ae0>
+2024-05-07 11:56:12,420 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:12,421 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:12,421 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:12,421 : DEBUG : send_request_body.complete
+2024-05-07 11:56:12,421 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:12,555 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:56:12 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX21lZGl1bV9zZXNzaW9uIjoiYXBpIiwic2lkIjoiNDgyNDYtY2NkMWEzNDQtMGM2OC0xMWVmLTg2MTEtY2FmOWI5ZWI3NWMxIiwibGFuZ19jb2RlIjoiZnIiLCJ0aW1lc3RhbXAiOjE3MTUwODI5NzIsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSJ9.OX1Hixdb2bZo20Nl3pTkxBy8XPSQ2TqjKyNWSzSumoQ; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=ccd1a736-0c68-11ef-ad6b-561bbaeb75c1; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:12 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:56:12 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082972; path=/; expires=Wed, 07-May-2025 11:56:12 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTcyLCJpZHMiOlsiNDU2MjI3Mjg2MCJdfQ.TCKt-sTbgiI1Z0roGMwUiBd2DjRKFBkSBujPhpJCoTY; path=/; expires=Tue, 07-May-2024 13:26:12 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:12 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'7600559'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:56:12,557 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4562272860?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=A40BA02223848F7FD8273305FCE96957E39CD8ED "HTTP/1.1 404 Not Found"
+2024-05-07 11:56:12,557 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:12,558 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:12,559 : DEBUG : response_closed.started
+2024-05-07 11:56:12,559 : DEBUG : response_closed.complete
+2024-05-07 11:56:17,862 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:17,863 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:17,895 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:17,919 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e842b10>
+2024-05-07 11:56:17,919 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e868c50> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:17,970 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e842f00>
+2024-05-07 11:56:17,971 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:17,971 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:17,971 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:17,972 : DEBUG : send_request_body.complete
+2024-05-07 11:56:17,972 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:18,120 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:56:18 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4758'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJjbGlja19pZCI6IlVzZ2kwR2dNN3hHaHM4cjV1ZXQxd1EiLCJhZF9pZCI6IjQ0OTg5ODU0MDIiLCJlcG9jaHRpbWUiOjE3MTUwODI5Nzh9.byF8pgse8KaEcGJISnCjHpBfHyoRrRpMS4mNU2cZ1gM; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:18 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUiLCJ0aW1lc3RhbXAiOjE3MTUwODI5NzgsImxhbmdfY29kZSI6ImZyIiwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsInNpZCI6IjQ4NDcxLWQwMjAzOTIwLTBjNjgtMTFlZi04NjExLWNhZjliOWViNzVjMSJ9.h2SX3ZwyJl8oZLG95BR6kouMGXzcLVamyufWELWzwUs; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=d0203c04-0c68-11ef-aba4-371cbaeb75c1; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:18 GMT; max-age=63072000'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:18 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDQ5ODk4NTQwMiJdLCJjcmVhdGVkIjoxNzE1MDgyOTc3fQ.pQo2x0GeC0khlXRUplTKih6fLCMuDZV3pZ85JpyPapk; path=/; expires=Tue, 07-May-2024 13:26:18 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082977; path=/; expires=Wed, 07-May-2025 11:56:18 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:56:18 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'6626968'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:56:18,121 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4498985402?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=9E03C507A8BF393BE24DCF41CCBAAFD58720A6A5 "HTTP/1.1 200 OK"
+2024-05-07 11:56:18,122 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:18,122 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:18,122 : DEBUG : response_closed.started
+2024-05-07 11:56:18,122 : DEBUG : response_closed.complete
+2024-05-07 11:56:23,267 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:23,269 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:23,330 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:23,381 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e85abd0>
+2024-05-07 11:56:23,382 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e6a1cd0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:23,431 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e85a810>
+2024-05-07 11:56:23,431 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:23,431 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:23,431 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:23,431 : DEBUG : send_request_body.complete
+2024-05-07 11:56:23,431 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:23,556 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:56:23 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4763'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJjbGlja19pZCI6IkJpRmowMmdNN3hHeGlrSDlzZ2l3cEEiLCJlcG9jaHRpbWUiOjE3MTUwODI5ODMsImFkX2lkIjoiNDUwMDU1Nzk3NSJ9.ifHY5rRabZzwUizARL8wT7TQbjdi7kBhdoJl5Sa9JjQ; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:23 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRpbWVzdGFtcCI6MTcxNTA4Mjk4MywidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1IiwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsInNpZCI6IjE0ODc1OS1kMzYxMGJhMC0wYzY4LTExZWYtOWU4Mi00MWZkYjIwOGIwYTQifQ.dkglUYUZ8E__oJSgauBaagGIa3gFfVK1nEm_7t-HyTc; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=d3610e52-0c68-11ef-9202-ef1eb308b0a4; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:23 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:56:23 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDUwMDU1Nzk3NSJdLCJjcmVhdGVkIjoxNzE1MDgyOTgzfQ.PaB9gF5ldnD0c3z1AhfugI367DaC2jgATrHgPyB_Ins; path=/; expires=Tue, 07-May-2024 13:26:23 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082983; path=/; expires=Wed, 07-May-2025 11:56:23 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:23 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'33871911'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:56:23,558 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4500557975?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=F41122DF275B7528B03373AD1C5154299551D8C9 "HTTP/1.1 200 OK"
+2024-05-07 11:56:23,559 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:23,559 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:23,560 : DEBUG : response_closed.started
+2024-05-07 11:56:23,560 : DEBUG : response_closed.complete
+2024-05-07 11:56:27,229 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:27,229 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:27,256 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:27,282 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6afb60>
+2024-05-07 11:56:27,282 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e8799d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:27,337 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6af8c0>
+2024-05-07 11:56:27,337 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:27,338 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:27,338 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:27,338 : DEBUG : send_request_body.complete
+2024-05-07 11:56:27,338 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:27,497 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:56:27 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4770'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJlcG9jaHRpbWUiOjE3MTUwODI5ODcsImFkX2lkIjoiNDU1MDU4NjQ4NSIsImNsaWNrX2lkIjoiQXBDNTFXZ003eEcwR0FHQ2NGTFkxdyJ9._HD2KZkmdCl6A5pEEeoDnlazXicWqlVIxcIegd_Q0Y4; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:27 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX21lZGl1bV9zZXNzaW9uIjoiYXBpIiwibGFuZ19jb2RlIjoiZnIiLCJzaWQiOiIxNTExMTEtZDViNjVmNDAtMGM2OC0xMWVmLTk0OTQtMDE4MjcwNTJkOGQ3IiwidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1IiwidGltZXN0YW1wIjoxNzE1MDgyOTg3fQ.CiF5UhpKqAlqSzzO-s8ozXwLR_NX69_RJ0ulwTGqS58; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=d5b66332-0c68-11ef-9925-40a47052d8d7; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:27 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_epoch=1715082987; path=/; expires=Wed, 07-May-2025 11:56:27 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTg3LCJpZHMiOlsiNDU1MDU4NjQ4NSJdfQ.BJsJ_vKVgrUmcv_HMsDGB4s395O73KSDPIyhNfZ6H2I; path=/; expires=Tue, 07-May-2024 13:26:27 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:27 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:56:27 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'89676990'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:56:27,499 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4550586485?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=431CB2EEBB9A499FE29E75ED70F6F648037FA650 "HTTP/1.1 200 OK"
+2024-05-07 11:56:27,500 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:27,500 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:27,501 : DEBUG : response_closed.started
+2024-05-07 11:56:27,501 : DEBUG : response_closed.complete
+2024-05-07 11:56:32,588 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:32,590 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:32,616 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:32,640 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e8adca0>
+2024-05-07 11:56:32,640 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e87ba50> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:32,690 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e8ad640>
+2024-05-07 11:56:32,690 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:32,691 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:32,691 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:32,691 : DEBUG : send_request_body.complete
+2024-05-07 11:56:32,691 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:32,810 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:56:32 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUiLCJzaWQiOiIxNDg5ODMtZDhlNjdjZjQtMGM2OC0xMWVmLTllODItNDFmZGIyMDhiMGE0IiwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsImxhbmdfY29kZSI6ImZyIiwidGltZXN0YW1wIjoxNzE1MDgyOTkyfQ.nXIZlG7cv-U38fgz8W4fLfYGQZpWYkwS6XP-PkBcGjU; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=d8e68014-0c68-11ef-af87-cf1fb308b0a4; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:32 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTkyLCJpZHMiOlsiNDU0NjM4MzM5OCJdfQ.SsHegQwsRZKnmnuxE6sN5GcGsfAPjk2wCkYxr9DowZ4; path=/; expires=Tue, 07-May-2024 13:26:32 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:32 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715082992; path=/; expires=Wed, 07-May-2025 11:56:32 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:56:32 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'64381789'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:56:32,813 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4546383398?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=61ACF09A144CD8C7D6DD7F7562B17791AA23E443 "HTTP/1.1 404 Not Found"
+2024-05-07 11:56:32,813 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:32,815 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:32,815 : DEBUG : response_closed.started
+2024-05-07 11:56:32,815 : DEBUG : response_closed.complete
+2024-05-07 11:56:37,194 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:37,196 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:37,259 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:37,284 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e5258e0>
+2024-05-07 11:56:37,284 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e516c50> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:37,333 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e5257f0>
+2024-05-07 11:56:37,333 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:37,334 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:37,334 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:37,334 : DEBUG : send_request_body.complete
+2024-05-07 11:56:37,334 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:37,474 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:56:37 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4742'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJhZF9pZCI6IjQyODY1NjgzMDciLCJjbGlja19pZCI6IndoYXUyMmdNN3hHeGlrSDlzZ2l3cEEiLCJlcG9jaHRpbWUiOjE3MTUwODI5OTd9.PdQFGIW_MIx81lX2bBy1MuDyi4nIpy7xUG0etcAKwgY; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:37 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRpbWVzdGFtcCI6MTcxNTA4Mjk5NywidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1Iiwic2lkIjoiMTQ4Njk1LWRiYWIzMmI4LTBjNjgtMTFlZi05ZTgyLTQxZmRiMjA4YjBhNCIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkifQ.ylCdwCI0gA1_l0k7QfjPH7605Fltl816ZaDQTh8op0I; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=dbab363c-0c68-11ef-83ec-af1eb308b0a4; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:37 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_epoch=1715082997; path=/; expires=Wed, 07-May-2025 11:56:37 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:37 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgyOTk3LCJpZHMiOlsiNDI4NjU2ODMwNyJdfQ.iPC8qSF1roJGDsPvulAPtqE_3zL_GpvGmxNGpBeB0-U; path=/; expires=Tue, 07-May-2024 13:26:37 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:56:37 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'63891995'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:56:37,476 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4286568307?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=5A718AB046ACD3579F4DC2D43347486A89874A1A "HTTP/1.1 200 OK"
+2024-05-07 11:56:37,477 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:37,477 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:37,477 : DEBUG : response_closed.started
+2024-05-07 11:56:37,477 : DEBUG : response_closed.complete
+2024-05-07 11:56:41,160 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:41,162 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:41,188 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:41,213 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e540bc0>
+2024-05-07 11:56:41,213 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e5488d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:41,262 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e540aa0>
+2024-05-07 11:56:41,263 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:41,263 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:41,263 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:41,264 : DEBUG : send_request_body.complete
+2024-05-07 11:56:41,264 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:41,402 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:56:41 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4772'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJlcG9jaHRpbWUiOjE3MTUwODMwMDEsImNsaWNrX2lkIjoiOWt3RjNtZ003eEd4aWtIOXNnaXdwQSIsImFkX2lkIjoiNDI4NjU3MDEzOSJ9.w82w8Xaltc8sl7BjNmwhu67qCG4HmddjminORwV0FeU; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:41 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRpbWVzdGFtcCI6MTcxNTA4MzAwMSwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsInNpZCI6IjE0ODkxMi1kZTAyOWExMC0wYzY4LTExZWYtOWU4Mi00MWZkYjIwOGIwYTQiLCJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUifQ.b-yced17eDHbREh_eExwKDNXjSikZXfWdpy5U2g602A; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=de029ce0-0c68-11ef-a85f-881fb308b0a4; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:41 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:56:41 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:41 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083001; path=/; expires=Wed, 07-May-2025 11:56:41 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgzMDAxLCJpZHMiOlsiNDI4NjU3MDEzOSJdfQ.mF0GHGlLRGsII-_oEkh1PV0EOs_axVO6S17I2ET32I8; path=/; expires=Tue, 07-May-2024 13:26:41 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'64646639'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:56:41,405 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4286570139?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=F4B6AE7B10B03B4BBE02D0D1392DBB2193891E35 "HTTP/1.1 200 OK"
+2024-05-07 11:56:41,405 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:41,406 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:41,406 : DEBUG : response_closed.started
+2024-05-07 11:56:41,406 : DEBUG : response_closed.complete
+2024-05-07 11:56:48,107 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:48,108 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:48,133 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:48,157 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e543f50>
+2024-05-07 11:56:48,157 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e54a3d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:48,211 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e543950>
+2024-05-07 11:56:48,211 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:48,211 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:48,211 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:48,211 : DEBUG : send_request_body.complete
+2024-05-07 11:56:48,211 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:48,339 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:56:48 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUiLCJ0aW1lc3RhbXAiOjE3MTUwODMwMDgsInNpZCI6IjE1MDgxNC1lMjI2YzFlOC0wYzY4LTExZWYtOTQ5NC0wMTgyNzA1MmQ4ZDciLCJsYW5nX2NvZGUiOiJmciIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkifQ.WyrQmJfckZN0Yb4yqvHlGGwJZHYDSPNybEubkGLIz28; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=e226c4f4-0c68-11ef-876d-17a37052d8d7; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:48 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:56:48 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:48 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgzMDA4LCJpZHMiOlsiNDUyMzAxNzQ3MyJdfQ.UcKm7GwgZMnBI1VqWu1efkKNq9EA2mDAxRt-qtQPuls; path=/; expires=Tue, 07-May-2024 13:26:48 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083008; path=/; expires=Wed, 07-May-2025 11:56:48 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'140630285'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:56:48,341 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4523017473?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=0300C08960F58724167E78C5765C5AFD8A204880 "HTTP/1.1 404 Not Found"
+2024-05-07 11:56:48,342 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:48,343 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:48,344 : DEBUG : response_closed.started
+2024-05-07 11:56:48,344 : DEBUG : response_closed.complete
+2024-05-07 11:56:52,664 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:52,666 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:52,691 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:52,715 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6add60>
+2024-05-07 11:56:52,715 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e5142d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:52,766 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6af2c0>
+2024-05-07 11:56:52,766 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:52,767 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:52,767 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:52,767 : DEBUG : send_request_body.complete
+2024-05-07 11:56:52,767 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:52,901 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:56:52 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3MTUwODMwMTIsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSIsImxhbmdfY29kZSI6ImZyIiwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsInNpZCI6IjM0ODU4Ni1lNGRkZmRjMC0wYzY4LTExZWYtYWM4YS1kNmFjMDFjOTdmOWIifQ.dcmbm-ttXThvKMGnp3wRZ5cU6B6nRX2jPQ-0JjUaNp4; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=e4de022a-0c68-11ef-8d7c-61cf01c97f9b; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:52 GMT; max-age=63072000'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:52 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083012; path=/; expires=Wed, 07-May-2025 11:56:52 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:56:52 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDU0NzM1OTIwNSJdLCJjcmVhdGVkIjoxNzE1MDgzMDEyfQ.D_Q1tOsFtmy3bimOV0eOkC0ZdTwOAiQ-HbEYvKChroY; path=/; expires=Tue, 07-May-2024 13:26:52 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'200724576'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:56:52,905 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4547359205?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=D42172456C2D2C83D8B9FAE266D54754594E20B3 "HTTP/1.1 404 Not Found"
+2024-05-07 11:56:52,905 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:52,907 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:52,907 : DEBUG : response_closed.started
+2024-05-07 11:56:52,907 : DEBUG : response_closed.complete
+2024-05-07 11:56:59,202 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:56:59,203 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:56:59,264 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:56:59,288 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7c5310>
+2024-05-07 11:56:59,288 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e8180d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:56:59,336 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7c5280>
+2024-05-07 11:56:59,336 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:59,337 : DEBUG : send_request_headers.complete
+2024-05-07 11:56:59,337 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:56:59,337 : DEBUG : send_request_body.complete
+2024-05-07 11:56:59,337 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:56:59,455 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:56:59 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3MTUwODMwMTksImxhbmdfY29kZSI6ImZyIiwidHJhZmZpY19zb3VyY2Vfc2Vzc2lvbiI6IjYxNmNhN2Q1Iiwic2lkIjoiMTQ4ODQwLWU4Yzg3ZTZhLTBjNjgtMTFlZi05ZTgyLTQxZmRiMjA4YjBhNCIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkifQ.BBNYZgr72ziq9u2e6r8vaTfi7aVHdyGtks3MlMxm-ow; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=e8c882a2-0c68-11ef-af74-401fb308b0a4; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:56:59 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:56:59 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:56:59 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgzMDE5LCJpZHMiOlsiNDU2MzI4MDkxMiJdfQ.ub9y4uyM4-i9cq4EshPDKm-M5YwOj9nXqofvrcsxF2E; path=/; expires=Tue, 07-May-2024 13:26:59 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083019; path=/; expires=Wed, 07-May-2025 11:56:59 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'29806251'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:56:59,456 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4563280912?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=92BBA8F4B4B4F85C32E9B3BE1BE6CABC27AA3296 "HTTP/1.1 404 Not Found"
+2024-05-07 11:56:59,456 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:56:59,456 : DEBUG : receive_response_body.complete
+2024-05-07 11:56:59,456 : DEBUG : response_closed.started
+2024-05-07 11:56:59,456 : DEBUG : response_closed.complete
+2024-05-07 11:57:03,807 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:03,808 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:03,836 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:03,861 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e4eb320>
+2024-05-07 11:57:03,861 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e582950> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:03,914 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e4eb350>
+2024-05-07 11:57:03,914 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:03,915 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:03,915 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:03,916 : DEBUG : send_request_body.complete
+2024-05-07 11:57:03,916 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:04,068 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:57:04 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4799'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJhZF9pZCI6IjQyODY1NjgyMDgiLCJjbGlja19pZCI6IlFtaUc2MmdNN3hHaHM4cjV1ZXQxd1EiLCJlcG9jaHRpbWUiOjE3MTUwODMwMjN9.XG3SqcqA5T3S1JLczqFFXV3lEM9jpKr1hrWViuSRwo4; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:03 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInNpZCI6IjQ4NTUyLWViODJlNzA4LTBjNjgtMTFlZi04NjExLWNhZjliOWViNzVjMSIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJ0aW1lc3RhbXAiOjE3MTUwODMwMjQsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSJ9.SUhKj8qaToc7UlVhWqCNY76I36NgsVi_5r9fvzviPVM; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=eb82eabe-0c68-11ef-a159-881cbaeb75c1; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:04 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:57:04 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:04 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083023; path=/; expires=Wed, 07-May-2025 11:57:04 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDI4NjU2ODIwOCJdLCJjcmVhdGVkIjoxNzE1MDgzMDIzfQ.jA8w18wMvb-TmP_0Gcch47VN8XWjI3ICcghud9BWi_8; path=/; expires=Tue, 07-May-2024 13:27:04 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'4987266'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:57:04,071 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4286568208?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=DA3DDC737A38D6F547ED25E5404441F9AF75AA6A "HTTP/1.1 200 OK"
+2024-05-07 11:57:04,071 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:04,072 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:04,072 : DEBUG : response_closed.started
+2024-05-07 11:57:04,072 : DEBUG : response_closed.complete
+2024-05-07 11:57:09,195 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:09,197 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:09,257 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:09,305 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e4e81a0>
+2024-05-07 11:57:09,305 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e4dc7d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:09,351 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e4e8350>
+2024-05-07 11:57:09,351 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:09,352 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:09,352 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:09,352 : DEBUG : send_request_body.complete
+2024-05-07 11:57:09,353 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:09,518 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:57:09 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSIsInRpbWVzdGFtcCI6MTcxNTA4MzAyOSwic2lkIjoiMzQ4Nzk5LWVlYmZkYTJhLTBjNjgtMTFlZi1hYzhhLWQ2YWMwMWM5N2Y5YiIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkifQ.si2MmWWSXreit9OtL6OARsHqjSrtXrsEQp2E_y46_C0; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=eebfdd4a-0c68-11ef-859d-36d001c97f9b; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:09 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_epoch=1715083029; path=/; expires=Wed, 07-May-2025 11:57:09 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:09 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDQ1MTM5NjA2NyJdLCJjcmVhdGVkIjoxNzE1MDgzMDI5fQ.HBgWiJuyvGZIDsI0onzvvmKp_k-ywq9rI4wnI2OsPmg; path=/; expires=Tue, 07-May-2024 13:27:09 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:57:09 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'185886257'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:57:09,521 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4451396067?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=C0C6B8AC331BB3405B88B85072570E07C2C09B90 "HTTP/1.1 404 Not Found"
+2024-05-07 11:57:09,521 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:09,522 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:09,522 : DEBUG : response_closed.started
+2024-05-07 11:57:09,523 : DEBUG : response_closed.complete
+2024-05-07 11:57:14,780 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:14,780 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:14,811 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:14,837 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e3e3bc0>
+2024-05-07 11:57:14,837 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e3f0b50> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:14,890 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e3e3aa0>
+2024-05-07 11:57:14,890 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:14,891 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:14,891 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:14,891 : DEBUG : send_request_body.complete
+2024-05-07 11:57:14,892 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:14,985 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:57:14 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3MTUwODMwMzQsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSIsImxhbmdfY29kZSI6ImZyIiwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsInNpZCI6IjM0ODY1OS1mMjBkODZmMC0wYzY4LTExZWYtYWM4YS1kNmFjMDFjOTdmOWIifQ.in8uV4WMLfG0NkPSc_c1h1sR-Nit3JPvsGSChlSWrD4; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=f20d8e52-0c68-11ef-b0aa-aacf01c97f9b; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:14 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:57:14 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDQ1MTM5NjE5OCJdLCJjcmVhdGVkIjoxNzE1MDgzMDM0fQ.iN0vOkMa1XsL_Nzd4PFucKVR7XQ_XvvGCRxc_E6C6-k; path=/; expires=Tue, 07-May-2024 13:27:14 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083034; path=/; expires=Wed, 07-May-2025 11:57:14 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:14 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'185886271'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:57:14,988 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4451396198?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=CEDF4B4FD4E54644AF4378A49F1B95662A04CC11 "HTTP/1.1 404 Not Found"
+2024-05-07 11:57:14,988 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:15,011 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:15,011 : DEBUG : response_closed.started
+2024-05-07 11:57:15,012 : DEBUG : response_closed.complete
+2024-05-07 11:57:21,386 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:21,388 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:21,414 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:21,437 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7d5dc0>
+2024-05-07 11:57:21,437 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e7bb1d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:21,484 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7d5b50>
+2024-05-07 11:57:21,484 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:21,485 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:21,485 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:21,485 : DEBUG : send_request_body.complete
+2024-05-07 11:57:21,485 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:21,610 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:57:21 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4725'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJjbGlja19pZCI6IkVpWC05V2dNN3hHVmI5YXNBY2xfbXciLCJlcG9jaHRpbWUiOjE3MTUwODMwNDEsImFkX2lkIjoiNDQ3MTcyNTUwOSJ9.aBmxx1_89VOrCM6ZlT617edlcvhNbDF11_fGwrOA6Sk; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:21 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX21lZGl1bV9zZXNzaW9uIjoiYXBpIiwic2lkIjoiMzQ4Nzk5LWY1ZmI2NjJlLTBjNjgtMTFlZi1hYzhhLWQ2YWMwMWM5N2Y5YiIsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSIsInRpbWVzdGFtcCI6MTcxNTA4MzA0MSwibGFuZ19jb2RlIjoiZnIifQ.BTAZhnQp_-brDfvcczAmXMp8K9MnK99x4g0egqDMkok; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=f5fb6a48-0c68-11ef-9ff4-36d001c97f9b; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:21 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDQ3MTcyNTUwOSJdLCJjcmVhdGVkIjoxNzE1MDgzMDQxfQ.i5L1zuMxH9MChzOL59hQmgj3DbYVjXfsFO-rZ9boadU; path=/; expires=Tue, 07-May-2024 13:27:21 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:57:21 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083041; path=/; expires=Wed, 07-May-2025 11:57:21 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:21 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'201329158'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:57:21,612 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4471725509?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=225831E58B88D4FFB0A7A831F1C9FF9E58EB13CE "HTTP/1.1 200 OK"
+2024-05-07 11:57:21,613 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:21,614 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:21,614 : DEBUG : response_closed.started
+2024-05-07 11:57:21,614 : DEBUG : response_closed.complete
+2024-05-07 11:57:25,644 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:25,646 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:25,672 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:25,715 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7c5430>
+2024-05-07 11:57:25,715 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e7b8b50> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:25,765 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7c7860>
+2024-05-07 11:57:25,766 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:25,767 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:25,767 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:25,767 : DEBUG : send_request_body.complete
+2024-05-07 11:57:25,767 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:25,890 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:57:25 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUiLCJzaWQiOiIxNDkxNDMtZjg4OGI5ZmEtMGM2OC0xMWVmLTllODItNDFmZGIyMDhiMGE0IiwidHJhZmZpY19tZWRpdW1fc2Vzc2lvbiI6ImFwaSIsImxhbmdfY29kZSI6ImZyIiwidGltZXN0YW1wIjoxNzE1MDgzMDQ1fQ.K0-uWZKZUi6RZSOk50T5VFBDjnqJLusMOMRtEcyHgG4; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=f888bce8-0c68-11ef-8ef9-6f20b308b0a4; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:25 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:57:25 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgzMDQ1LCJpZHMiOlsiNDUyODc1MzI3NyJdfQ.BOzzxw74uLkAxR-5b8dB3HKS3XK0DLB5mUfO7990Umw; path=/; expires=Tue, 07-May-2024 13:27:25 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083045; path=/; expires=Wed, 07-May-2025 11:57:25 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:25 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'65051620'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:57:25,892 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4528753277?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=0D284D893E42527D47214B3D438C37E32618010B "HTTP/1.1 404 Not Found"
+2024-05-07 11:57:25,893 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:25,894 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:25,894 : DEBUG : response_closed.started
+2024-05-07 11:57:25,895 : DEBUG : response_closed.complete
+2024-05-07 11:57:31,334 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:31,336 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:31,362 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:31,386 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6aede0>
+2024-05-07 11:57:31,386 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e87a7d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:31,434 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6aec90>
+2024-05-07 11:57:31,435 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:31,435 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:31,436 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:31,436 : DEBUG : send_request_body.complete
+2024-05-07 11:57:31,436 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:31,578 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:57:31 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3MTUwODMwNTEsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSIsInNpZCI6IjE1MTEwNS1mYmU5ZTZkYy0wYzY4LTExZWYtOTQ5NC0wMTgyNzA1MmQ4ZDciLCJsYW5nX2NvZGUiOiJmciIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkifQ.aO5c3bWLgWYXZXViGRoy5gBdgSySk-IbTx0T4KLGbR4; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=fbe9eaba-0c68-11ef-b41c-3aa47052d8d7; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:31 GMT; max-age=63072000'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:31 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgzMDUxLCJpZHMiOlsiNDQ2NjYxNDg5MiJdfQ.58D04UwWfm3nRgeeuYYqn9jodDrCx5n_fBAmcbNnaZQ; path=/; expires=Tue, 07-May-2024 13:27:31 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083051; path=/; expires=Wed, 07-May-2025 11:57:31 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:57:31 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'139781313'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:57:31,580 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4466614892?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=837775BD58F831B03D4F73102D2360B695B829E7 "HTTP/1.1 404 Not Found"
+2024-05-07 11:57:31,580 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:31,582 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:31,582 : DEBUG : response_closed.started
+2024-05-07 11:57:31,582 : DEBUG : response_closed.complete
+2024-05-07 11:57:36,480 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:36,480 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:36,507 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:36,531 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e457410>
+2024-05-07 11:57:36,531 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e4596d0> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:36,579 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e4572f0>
+2024-05-07 11:57:36,579 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:36,580 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:36,580 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:36,580 : DEBUG : send_request_body.complete
+2024-05-07 11:57:36,580 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:36,724 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:57:36 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUiLCJsYW5nX2NvZGUiOiJmciIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJ0aW1lc3RhbXAiOjE3MTUwODMwNTYsInNpZCI6IjM0Njc0NS1mZWZiYWU4Mi0wYzY4LTExZWYtOTY3YS01YjQ3YTUxMWM2MDQifQ.jP-2TBvmdxGVGaIhs28j8LFXL7TTQ-WG4UDaPeWM1ZY; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=fefbb38c-0c68-11ef-a8d6-0e68a511c604; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:36 GMT; max-age=63072000'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:36 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=1; path=/; expires=Thu, 06-Jun-2024 11:57:36 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083056; path=/; expires=Wed, 07-May-2025 11:57:36 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJpZHMiOlsiNDUxNDE3MDY0NyJdLCJjcmVhdGVkIjoxNzE1MDgzMDU2fQ.kYz_FBtRi4l1XQsBgT2kb5oLenH9NmG8UXOTrCLRUEY; path=/; expires=Tue, 07-May-2024 13:27:36 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'158726508'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:57:36,725 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4514170647?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=134ADF6A45B36F48BD1411F9C76A77DBFB05B874 "HTTP/1.1 404 Not Found"
+2024-05-07 11:57:36,725 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:36,725 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:36,725 : DEBUG : response_closed.started
+2024-05-07 11:57:36,725 : DEBUG : response_closed.complete
+2024-05-07 11:57:42,959 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:42,961 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:42,988 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:43,013 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6addc0>
+2024-05-07 11:57:43,013 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e879750> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:43,066 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e6ae090>
+2024-05-07 11:57:43,066 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:43,067 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:43,067 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:43,067 : DEBUG : send_request_body.complete
+2024-05-07 11:57:43,068 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:43,207 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 404, b'Not Found', [(b'Date', b'Tue, 07 May 2024 11:57:43 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3MTUwODMwNjMsInRyYWZmaWNfc291cmNlX3Nlc3Npb24iOiI2MTZjYTdkNSIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJsYW5nX2NvZGUiOiJmciIsInNpZCI6IjE1MTQwMy0wMmQ5MWRlNi0wYzY5LTExZWYtOTQ5NC0wMTgyNzA1MmQ4ZDcifQ.rjcvce9d5ku8TvFKObH_Qd3P-fHX1OWcF9y5OswZtt0; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=02d9220a-0c69-11ef-b76d-64a57052d8d7; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:43 GMT; max-age=63072000'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:57:43 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083063; path=/; expires=Wed, 07-May-2025 11:57:43 GMT'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:43 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgzMDYzLCJpZHMiOlsiNDQ5NzY0MzYxNyJdfQ.sL7o8iEaxlQXIvVlrDUaOBuHcmM2hlnac3pxOP8-_T4; path=/; expires=Tue, 07-May-2024 13:27:43 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'X-Has-HTTPS'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'140111958'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)')])
+2024-05-07 11:57:43,209 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4497643617?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=9EDC035C7035538C43C224FBD525E3E25600C699 "HTTP/1.1 404 Not Found"
+2024-05-07 11:57:43,209 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:43,210 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:43,211 : DEBUG : response_closed.started
+2024-05-07 11:57:43,211 : DEBUG : response_closed.complete
+2024-05-07 11:57:46,928 : DEBUG : load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-05-07 11:57:46,928 : DEBUG : load_verify_locations cafile='/usr/local/lib/python3.12/site-packages/certifi/cacert.pem'
+2024-05-07 11:57:46,972 : DEBUG : connect_tcp.started host='www.adzuna.fr' port=443 local_address=None timeout=5.0 socket_options=None
+2024-05-07 11:57:46,997 : DEBUG : connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7c4680>
+2024-05-07 11:57:46,997 : DEBUG : start_tls.started ssl_context=<ssl.SSLContext object at 0x7f117e818750> server_hostname='www.adzuna.fr' timeout=5.0
+2024-05-07 11:57:47,047 : DEBUG : start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7f117e7c48f0>
+2024-05-07 11:57:47,047 : DEBUG : send_request_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:47,048 : DEBUG : send_request_headers.complete
+2024-05-07 11:57:47,048 : DEBUG : send_request_body.started request=<Request [b'GET']>
+2024-05-07 11:57:47,048 : DEBUG : send_request_body.complete
+2024-05-07 11:57:47,048 : DEBUG : receive_response_headers.started request=<Request [b'GET']>
+2024-05-07 11:57:47,178 : DEBUG : receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Tue, 07 May 2024 11:57:47 GMT'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Content-Length', b'4734'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=15552000; includeSubDomains; preload'), (b'Set-Cookie', b'ca_10210=eyJhbGciOiJIUzI1NiJ9.eyJhZF9pZCI6IjQ0MTc5MTkyMDciLCJjbGlja19pZCI6ImprTTdCV2tNN3hHblpWdEhwUkhHQkEiLCJlcG9jaHRpbWUiOjE3MTUwODMwNjd9.ITylAVe7OXqYc3qsqlTB7YQOH9k2fwcayMbtFiof9eo; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:47 GMT; secure; HttpOnly; SameSite=None'), (b'Set-Cookie', b'session=eyJhbGciOiJIUzI1NiJ9.eyJsYW5nX2NvZGUiOiJmciIsInRpbWVzdGFtcCI6MTcxNTA4MzA2Nywic2lkIjoiMzQ3MjY3LTA1Mzg3YTc4LTBjNjktMTFlZi1iNWMwLTViNDdhNTExYzYwNCIsInRyYWZmaWNfbWVkaXVtX3Nlc3Npb24iOiJhcGkiLCJ0cmFmZmljX3NvdXJjZV9zZXNzaW9uIjoiNjE2Y2E3ZDUifQ.505qzJ6JGnPEsDu3j4ICUpCTuypRCKvqzMdyAjrTEM8; domain=.adzuna.fr; path=/; secure'), (b'Set-Cookie', b'dcid2=05387de8-0c69-11ef-8c51-186aa511c604; domain=.adzuna.fr; path=/; expires=Thu, 07-May-2026 11:57:47 GMT; max-age=63072000'), (b'Set-Cookie', b'adzab_all=eyJhbGciOiJIUzI1NiJ9.e30.qlTPW8vysDmiCujOL-Mr6L9_AMvkcgDq7cyQjdIfXjA; domain=.adzuna.fr; path=/; expires=Thu, 06-Jun-2024 11:57:47 GMT'), (b'Set-Cookie', b'adzuna_session_ads=eyJhbGciOiJIUzI1NiJ9.eyJjcmVhdGVkIjoxNzE1MDgzMDY3LCJpZHMiOlsiNDQxNzkxOTIwNyJdfQ.LS1XSyxjoZqwYuLKWThYNe6IOF9FOivq7BjGAQlXxy4; path=/; expires=Tue, 07-May-2024 13:27:47 GMT'), (b'Set-Cookie', b'adzuna_epoch=1715083067; path=/; expires=Wed, 07-May-2025 11:57:47 GMT'), (b'Set-Cookie', b'adzuna_in_your_inbox=2; path=/; expires=Thu, 06-Jun-2024 11:57:47 GMT'), (b'Via', b'1.1 www.adzuna.fr'), (b'Vary', b'Accept-Encoding,X-Has-HTTPS'), (b'Content-Encoding', b'gzip'), (b'Referrer-Policy', b'origin'), (b'X-Varnish', b'139055737'), (b'Age', b'0'), (b'Via', b'1.1 varnish (Varnish/6.6)'), (b'Accept-Ranges', b'bytes')])
+2024-05-07 11:57:47,180 : INFO : HTTP Request: GET https://www.adzuna.fr/land/ad/4417919207?se=MBBJo-XK7hGJsseb5POPkA&utm_medium=api&utm_source=616ca7d5&v=E971DFE65582DD30421BBDF504F3CF79F16283B6 "HTTP/1.1 200 OK"
+2024-05-07 11:57:47,181 : DEBUG : receive_response_body.started request=<Request [b'GET']>
+2024-05-07 11:57:47,181 : DEBUG : receive_response_body.complete
+2024-05-07 11:57:47,181 : DEBUG : response_closed.started
+2024-05-07 11:57:47,182 : DEBUG : response_closed.complete
+2024-05-07 11:57:50,754 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:57:51,090 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/41369317.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=staffing%2B-%2Binformatique&utm_term=41369317&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:57:53,237 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:57:53,444 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/27751114.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=staffing%2B-%2Binformatique&utm_term=27751114&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:57:55,538 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:57:55,903 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/41640093.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=staffing%2B-%2Binformatique&utm_term=41640093&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:57:58,006 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:57:58,361 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/38308322.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=staffing%2B-%2Bcommerce&utm_term=38308322&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:58:00,463 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:58:00,817 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/44371428.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=classique%2B-%2Bcommerce&utm_term=44371428&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:58:02,926 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:58:03,036 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/44386654.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=classique%2B-%2Bcommerce&utm_term=44386654&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 52219
+2024-05-07 11:58:05,107 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:58:05,425 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/45745788.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=nonclient%2B-%2Binformatique&utm_term=45745788&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:58:07,520 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:58:07,885 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/32745915.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=nonclient%2B-%2Binformatique&utm_term=32745915&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:58:09,965 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:58:10,443 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/22755232.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=nonclient%2B-%2Binformatique&utm_term=22755232&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:58:12,493 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:58:12,798 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/32067897.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=nonclient%2B-%2Binformatique&utm_term=32067897&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:58:14,903 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:58:15,255 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/43744281.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=nonclient%2B-%2Binformatique&utm_term=43744281&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None
+2024-05-07 11:58:17,371 : DEBUG : Starting new HTTPS connection (1): www.hellowork.com:443
+2024-05-07 11:58:17,714 : DEBUG : https://www.hellowork.com:443 "GET /fr-fr/emplois/42186474.html?utm_source=adzuna&utm_medium=Metamoteurs-cpc&utm_campaign=staffing%2B-%2Binformatique&utm_term=42186474&utm_content=fluxadzuna&utm_source=adzuna&utm_medium=adzuna HTTP/1.1" 200 None

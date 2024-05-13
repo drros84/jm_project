@@ -1,0 +1,8 @@
+
+*/3 * * * * /usr/local/bin/python /app/App/src/Dashboard/app.py >> /var/log/logs/cron.log 
+                                
+
+
+
+
+

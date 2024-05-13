@@ -1,0 +1,11 @@
+certifi==2024.2.2
+charset-normalizer==3.3.2
+elastic-transport==8.13.0
+elasticsearch==8.13.1
+idna==3.7
+pathlib==1.0.1
+python-dotenv==1.0.1
+requests==2.31.0
+setuptools==69.5.1
+urllib3==2.2.1
+wheel==0.43.0
